@@ -14,7 +14,8 @@
 		0B092A6D204FC64E009D33ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B092A6B204FC64E009D33ED /* LaunchScreen.storyboard */; };
 		0B092A70204FC64E009D33ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B092A6F204FC64E009D33ED /* main.m */; };
 		0B092A7A204FC64F009D33ED /* BeaconDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B092A79204FC64F009D33ED /* BeaconDemoTests.m */; };
-		0BC7532D2050EF2400403A1A /* BLEScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7532C2050EF2400403A1A /* BLEScanner.m */; };
+		0B8F3BA72052854F0082784D /* AnalogBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F3BA32052854F0082784D /* AnalogBeaconViewController.m */; };
+		0B8F3BA82052854F0082784D /* ScanBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8F3BA42052854F0082784D /* ScanBeaconViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,10 @@
 		0B092A75204FC64F009D33ED /* BeaconDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B092A79204FC64F009D33ED /* BeaconDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconDemoTests.m; sourceTree = "<group>"; };
 		0B092A7B204FC64F009D33ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BC7532B2050EF2400403A1A /* BLEScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEScanner.h; sourceTree = "<group>"; };
-		0BC7532C2050EF2400403A1A /* BLEScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEScanner.m; sourceTree = "<group>"; };
+		0B8F3BA32052854F0082784D /* AnalogBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalogBeaconViewController.m; sourceTree = "<group>"; };
+		0B8F3BA42052854F0082784D /* ScanBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanBeaconViewController.m; sourceTree = "<group>"; };
+		0B8F3BA52052854F0082784D /* ScanBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanBeaconViewController.h; sourceTree = "<group>"; };
+		0B8F3BA62052854F0082784D /* AnalogBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalogBeaconViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +87,14 @@
 		0B092A5F204FC64E009D33ED /* BeaconDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0BC7532A2050EECE00403A1A /* Mesh */,
 				0B092A60204FC64E009D33ED /* AppDelegate.h */,
 				0B092A61204FC64E009D33ED /* AppDelegate.m */,
 				0B092A63204FC64E009D33ED /* ViewController.h */,
 				0B092A64204FC64E009D33ED /* ViewController.m */,
+				0B8F3BA52052854F0082784D /* ScanBeaconViewController.h */,
+				0B8F3BA42052854F0082784D /* ScanBeaconViewController.m */,
+				0B8F3BA62052854F0082784D /* AnalogBeaconViewController.h */,
+				0B8F3BA32052854F0082784D /* AnalogBeaconViewController.m */,
 				0B092A66204FC64E009D33ED /* Main.storyboard */,
 				0B092A69204FC64E009D33ED /* Assets.xcassets */,
 				0B092A6B204FC64E009D33ED /* LaunchScreen.storyboard */,
@@ -105,15 +111,6 @@
 				0B092A7B204FC64F009D33ED /* Info.plist */,
 			);
 			path = BeaconDemoTests;
-			sourceTree = "<group>";
-		};
-		0BC7532A2050EECE00403A1A /* Mesh */ = {
-			isa = PBXGroup;
-			children = (
-				0BC7532B2050EF2400403A1A /* BLEScanner.h */,
-				0BC7532C2050EF2400403A1A /* BLEScanner.m */,
-			);
-			path = Mesh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BC7532D2050EF2400403A1A /* BLEScanner.m in Sources */,
 				0B092A65204FC64E009D33ED /* ViewController.m in Sources */,
+				0B8F3BA82052854F0082784D /* ScanBeaconViewController.m in Sources */,
 				0B092A70204FC64E009D33ED /* main.m in Sources */,
 				0B092A62204FC64E009D33ED /* AppDelegate.m in Sources */,
+				0B8F3BA72052854F0082784D /* AnalogBeaconViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,9 +370,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2S5E9QH3S;
+				DEVELOPMENT_TEAM = 7H8TZJP3LL;
 				INFOPLIST_FILE = BeaconDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.o2o.BeaconDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,9 +385,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2S5E9QH3S;
+				DEVELOPMENT_TEAM = 7H8TZJP3LL;
 				INFOPLIST_FILE = BeaconDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.o2o.BeaconDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
